@@ -26,36 +26,15 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.description}>
           <p>
-            <Link href="about">About</Link>
+            <Link href="about">Go To About Page</Link>
           </p>
           <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+        Made By Hudson
           </div>
         </div>
 
         <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
+        
           <div className={styles.thirteen}>
             <Image
               src="/thirteen.svg"
@@ -64,15 +43,18 @@ export default function Home() {
               height={31}
               priority
             />
+            
           </div>
+          <h2>Days Til Next Class</h2>
         </div>
+        <h5>Computing Options:</h5>
 
         <div className={styles.grid}>
         {
           information && information.map((info, index) => {
-            if(info.department === "Business") {
+            if(info.department === "Computing") {
             return(
-              <Card key={index} degree={info.degree} colour="red" font="10px"/>
+              <Card key={index} degree={info.degree} colour="transparent" font="25px"/>
             )
             }
           })
